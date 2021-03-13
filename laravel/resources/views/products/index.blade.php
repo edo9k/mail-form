@@ -1,5 +1,5 @@
 
-@extends('produts.laytouts')
+@extends('products.layout')
 
 @section('content')
   <div class="row">
@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  @if ($message = $session::get('success'))
+  @if ($message = Session::get('success'))
     <div class="alert alert-success">
       <p>{{ $message }}</p>
     </div>
@@ -52,6 +52,8 @@
             @csrf
             @method('DELETE')
             <button type="submit" class="btn btn-danger">
+              Delete      
+            </button>
           </form>
         </td> <!-- end actions --> 
       </tr>
